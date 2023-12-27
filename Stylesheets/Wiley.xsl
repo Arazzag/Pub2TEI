@@ -1896,7 +1896,7 @@
                 </xsl:variable>
                     <xsl:if test="//noteGroup/note[@xml:id=$note][string-length() &gt; 0 ]">
                         <xsl:for-each select="//noteGroup/note[@xml:id=$note]">
-                            <note type="foot">
+                            <note type="foot" xml:id="{@xml:id}">
                                 <xsl:value-of select="p"/>
                             </note>
                             <xsl:if test="p/email">
