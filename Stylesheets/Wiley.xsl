@@ -1897,11 +1897,6 @@
                     <xsl:if test="//noteGroup/note[@xml:id=$note][string-length() &gt; 0 ]">
                         <xsl:for-each select="//noteGroup/note[@xml:id=$note]">
                             <note type="foot">
-                                <xsl:if test="@xml:id">
-                                    <xsl:attribute name="xml:id">
-                                        <xsl:value-of select="@xml:id"/>
-                                    </xsl:attribute>
-                                </xsl:if>
                                 <xsl:value-of select="p"/>
                             </note>
                             <xsl:if test="p/email">
