@@ -832,6 +832,11 @@
                     <xsl:value-of select="@ID"/>
                 </xsl:attribute>
             </xsl:if>
+            <xsl:if test="@id">
+                <xsl:attribute name="xml:id">
+                    <xsl:value-of select="@id"/>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:apply-templates/>
         </note>
     </xsl:template>
